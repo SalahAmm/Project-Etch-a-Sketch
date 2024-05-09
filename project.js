@@ -27,8 +27,8 @@ function input () {
 
 
 popup.addEventListener('click' , () => {
-    let input = input();
-    changeSize (input);
+     
+    changeSize (input());
 } )
 
 
@@ -48,15 +48,13 @@ popup.addEventListener('click' , () => {
 
 
 //make the div change color when hover
-function hover () {
+
     const square = document.querySelectorAll('.square');;
     square.forEach((square) => {
         square.addEventListener("mouseover" , () => {
             square.style.backgroundColor = "black";
-        })
-    })
-
-}
+        }
+    }    
 //clear the container 
 
 button.addEventListener ('click' , () => {
@@ -66,22 +64,34 @@ button.addEventListener ('click' , () => {
     })
 })
 
+createGrid()
+
+function createGrid(number = 16){
+
+
+    for ( let i = 0 ; i < number * number ; i++){
+        const square = document.createElement('div'); 
+        square.setAttribute("class" , "square");
+        content.style.width = "50%"
+        content.style.height = "50%"
+        square.style.width = `calc(100% / ${number})`;
+        square.style.height = `calc(100% / ${number})`;
+        content.appendChild(square);
+        
+
+    }
+}
 
 
 function changeSize (input) {
     let number = parseInt(input);
     let content = container ;
-    if ( number === 0 || number > 100 || number === '' ) {
-        prompt("enter the the size of the sketch");
+    if ( number === null || number > 100 || number === '' ) {
+        prompt("Error");
+        createGrid(16)
+
     }else {
-        for ( let i = 0 ; i < number * number ; i++){
-            const square = document.createElement('div'); 
-            square.setAttribute("class" , "square");
-            content.style.width = "50%"
-            content.style.height = "50%"
-            square.style.width = `calc(100% / ${number})`;
-            square.style.height = `calc(100% / ${number})`;
-            content.appendChild(square);
+        createGrid(number)
             
 
         }
