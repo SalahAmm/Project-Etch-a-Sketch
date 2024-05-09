@@ -1,0 +1,47 @@
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    
+}
+
+#container {
+    width: 50%;
+    height: 50%;
+    border: 5px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.square {
+    height: calc(100% / 16);
+    flex: 1 0 calc(100% / 16);
+    margin: 0;
+    padding: 0;
+}
+
+.firstButton {
+    padding: 20px;
+    border-radius: 20px;
+    border: solid 2px black;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.input{
+    padding: 20px;
+    border-radius: 20px;
+    border: solid 2px black;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
