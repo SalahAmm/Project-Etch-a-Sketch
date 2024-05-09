@@ -21,13 +21,13 @@ body {
 }
 
 .square {
-    height: calc(100% / 16);
-    flex: 1 0 calc(100% / 16);
+    /* height: calc(100% / 16); */
+    /* flex: 1 0 calc(100% / 16); */
     margin: 0;
     padding: 0;
 }
 
-.firstButton {
+button {
     padding: 20px;
     border-radius: 20px;
     border: solid 2px black;
@@ -36,7 +36,7 @@ body {
     font-size: 20px;
 }
 
-.input{
+.popup{
     padding: 20px;
     border-radius: 20px;
     border: solid 2px black;
